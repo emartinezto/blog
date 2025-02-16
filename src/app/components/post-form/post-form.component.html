@@ -1,1 +1,30 @@
-<p>post-form works!</p>
+<section class="form">
+  <form class="form__form container" method="post" action="#">
+    <div class="form__inner">
+      <div class="form__field">
+        <label class="form__label" for="title">Nombre de la receta</label>
+        <input class="form__input" type="text" name="title" id="tilte">
+      </div>
+      <div class="form__field">
+        <label class="form__label" for="category">Tipo de comida</label>
+        <select class="form__select">
+          <option value="beef">Carne</option>
+          <option value="chicken">Pollo</option>
+          <option value="pasta">Pasta</option>
+          <option value="seafood">marisco</option>
+          <option value="dessert">postres</option>
+          <option value="breakfast">desayunos</option>
+        </select>
+      </div>
+      <div class="form__field">
+        <label class="form__label" for="image">URL Imagen</label>
+        <input class="form__input" type="text" name="image" id="image">
+      </div>
+      <div class="form__field">
+        <label class="form__label" for="description">Descripción de la receta</label>
+        <textarea class="form__input" name="description" id="description" rows="3"></textarea>
+      </div>
+      <input class="form__button" type="submit" value="Publicar post">
+    </div>
+  </form>
+</section>

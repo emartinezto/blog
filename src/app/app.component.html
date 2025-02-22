@@ -5,7 +5,7 @@
   <!-- componente post-list -->
   <app-post-list></app-post-list>
   <!-- componente post-form -->
-  <app-post-form></app-post-form>
+  <app-post-form (sendPost)="getDataForm($event)"></app-post-form>
 </main>
 <footer class="footer">
   <app-footer></app-footer>

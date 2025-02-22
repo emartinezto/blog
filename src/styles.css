@@ -76,6 +76,8 @@ html {
     --color-gray-meidum-medium: #eeeeee;
     --color-gray-meidum-dark: #212931;
     --color-blue: #18bfef;
+    --color-white: #fff;
+    --color-black-medium: #1e252d;
 }
 
 .container {

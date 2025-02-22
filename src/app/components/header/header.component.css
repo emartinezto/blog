@@ -1,0 +1,10 @@
+.header__logo {
+    border: 3px solid var(--color-white);
+    color: var(--color-white);
+    font-size: 1.75rem;
+    font-weight: 900;
+    letter-spacing: 0.075em;
+    line-height: 1;
+    padding: 1rem 1.75rem;
+    text-transform: uppercase;
+}

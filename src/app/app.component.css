@@ -1,0 +1,26 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-black-medium);
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.footer {
+    background-color: var(--color-black-medium);
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 1023px) {
+    .header {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+
+    .footer {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+}

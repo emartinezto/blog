@@ -3,7 +3,7 @@
 </header>
 <main>
   <!-- componente post-list -->
-  <app-post-list></app-post-list>
+  <app-post-list [posts]="blogList"></app-post-list>
   <!-- componente post-form -->
   <app-post-form (sendPost)="getDataForm($event)"></app-post-form>
 </main>

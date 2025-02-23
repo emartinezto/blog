@@ -14,7 +14,7 @@
       <div class="form__field">
         <label class="form__label" for="date">Fecha de publicación</label>
         <input class="form__input" placeholder="Introduce la fecha que quieres que se publique la receta" type="date"
-          name="date" id="date" [(ngModel)]="newPost.date">
+          name="date" id="date" [(ngModel)]="newPost.date" [max]="today">
       </div>
       <div class="form__field">
         <label class="form__label" for="description">Descripción de la receta</label>

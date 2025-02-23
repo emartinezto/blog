@@ -9,7 +9,9 @@ import { IPost } from '../../interfaces/ipost.interface';
   styleUrl: './post-form.component.css'
 })
 export class PostFormComponent {
-  newPost: IPost = { id: 0, title: '', image: '', description: '', date: '' };
+  today: string = new Date().toISOString().split('T')[0];
+
+  newPost: IPost = { id: 0, title: '', image: '', description: '', date: this.today };
 
   @Output() sendPost: EventEmitter<IPost> = new EventEmitter();
 
@@ -24,6 +26,6 @@ export class PostFormComponent {
     }
 
     this.sendPost.emit(this.newPost);
-    this.newPost = { id: 0, title: '', image: '', description: '', date: '' };
+    this.newPost = { id: 0, title: '', image: '', description: '', date: this.today };
   }
 }

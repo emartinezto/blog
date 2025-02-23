@@ -1,4 +1,4 @@
-<section class="form">
+<section class="form" [class.-has-error]="hasError">
   <div class="form__form container" method="post" action="#">
     <div class="form__inner">
       <div class="form__field">
@@ -12,10 +12,16 @@
           [(ngModel)]="newPost.image">
       </div>
       <div class="form__field">
+        <label class="form__label" for="date">Fecha de publicación</label>
+        <input class="form__input" placeholder="Introduce la fecha que quieres que se publique la receta" type="date"
+          name="date" id="date" [(ngModel)]="newPost.date">
+      </div>
+      <div class="form__field">
         <label class="form__label" for="description">Descripción de la receta</label>
         <textarea class="form__input" placeholder="Introduce la descripcion de la receta" name="description"
           id="description" rows="3" [(ngModel)]="newPost.description"></textarea>
       </div>
+      <p class="form__error">El post no se envia, porque todos los campos deben estar rellenos</p>
       <button class="form__button" (click)="getPost()">Publicar post</button>
     </div>
   </div>

@@ -7,6 +7,20 @@
 
 }
 
+.form__error {
+    display: none;
+    color: var(--color-red);
+    font-size: .6rem;
+    font-weight: 900;
+    line-height: 1.5;
+    letter-spacing: .075em;
+    text-transform: uppercase;
+}
+
+.form.-has-error .form__error {
+    display: block;
+}
+
 .form__inner {
     display: flex;
     flex-direction: column;

@@ -9,12 +9,21 @@ import { IPost } from '../../interfaces/ipost.interface';
   styleUrl: './post-form.component.css'
 })
 export class PostFormComponent {
-  newPost: IPost = { id: 0, title: '', image: '', description: '', date: 0 };
+  newPost: IPost = { id: 0, title: '', image: '', description: '', date: '' };
 
   @Output() sendPost: EventEmitter<IPost> = new EventEmitter();
 
+  hasError = false;
+
   getPost() {
+
+    this.hasError = !this.newPost.title || !this.newPost.image || !this.newPost.date || !this.newPost.description;
+
+    if (this.hasError) {
+      return;
+    }
+
     this.sendPost.emit(this.newPost);
-    this.newPost = { id: 0, title: '', image: '', description: '', date: 0 };
+    this.newPost = { id: 0, title: '', image: '', description: '', date: '' };
   }
 }

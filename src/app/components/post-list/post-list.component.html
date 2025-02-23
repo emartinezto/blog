@@ -2,7 +2,7 @@
   @for (post of posts(); track post.title; let first = $first) {
   <article class="post__item container" [class.-first]="first">
     <div class="post__header">
-      <p class="post__date">Febrero 17, 2025</p>
+      <p class="post__date">{{post.date}}</p>
       <h2 class="post__title">{{post.title}}</h2>
     </div>
     <figure class="post__figure">
